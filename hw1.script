@@ -1,0 +1,116 @@
+Script started on 2022-10-14 00:18:19-07:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="80" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ #!/bin/bash
+[?2004l]777;notify;Command completed;#!/bin/bash\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ mkdir HW1
+[?2004l]777;preexec\]777;notify;Command completed;mkdir HW1\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ cd HW1
+[?2004l]777;preexec\]777;notify;Command completed;cd HW1\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ pwd
+[?2004l]777;preexec\/home/couchcai/HW1
+]777;notify;Command completed;pwd\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ echo \"This is fun\!\"
+[?2004l]777;preexec\"This is fun!"
+]777;notify;Command completed;echo \"This is fun\!\"\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ echo \"This is fun\!\" > now.txt
+[?2004l]777;preexec\]777;notify;Command completed;echo \"This is fun\!\" > now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ date >> now.txt
+[?2004l]777;preexec\]777;notify;Command completed;date >> now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ uname -a >> now.txt
+[?2004l]777;preexec\]777;notify;Command completed;uname -a >> now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ wc -l now.txt
+[?2004l]777;preexec\3 now.txt
+]777;notify;Command completed;wc -l now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ cat now.txt
+[?2004l]777;preexec\"This is fun!"
+Fri Oct 14 12:19:48 AM PDT 2022
+Linux localhost.localdomain 5.14.0-70.26.1.el9_0.x86_64 #1 SMP PREEMPT Tue Sep 20 17:53:31 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+]777;notify;Command completed;cat now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ cp now.txt pastnow.txt
+[?2004l]777;preexec\]777;notify;Command completed;cp now.txt pastnow.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ cd ~
+[?2004l]777;preexec\]777;notify;Command completed;cd ~\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ find -iname pastnow.txt
+[?2004l]777;preexec\./HW1/pastnow.txt
+]777;notify;Command completed;find -iname pastnow.txt\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ cd HW1
+[?2004l]777;preexec\]777;notify;Command completed;cd HW1\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ ls -l $HW1
+[?2004l]777;preexec\total 8
+-rw-rw-r-- 1 couchcai couchcai 178 Oct 14 00:19 now.txt
+-rw-rw-r-- 1 couchcai couchcai 178 Oct 14 00:20 pastnow.txt
+]777;notify;Command completed;ls -l $HW1\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ chmod u=rx now.txt
+[?2004l]777;preexec\]777;notify;Command completed;chmod u=rx now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ chmod g=x now.txt
+[?2004l]777;preexec\]777;notify;Command completed;chmod g=x now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ chmod o-[K=x now.txt
+[?2004l]777;preexec\]777;notify;Command completed;chmod o=x now.txt\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ ls -l $HW1
+[?2004l]777;preexec\total 8
+-r-x--x--x 1 couchcai couchcai 178 Oct 14 00:19 [0m[01;32mnow.txt[0m
+-rw-rw-r-- 1 couchcai couchcai 178 Oct 14 00:20 pastnow.txt
+]777;notify;Command completed;ls -l $HW1\]777;precmd\]0;couchcai@localhost:~/HW1\]7;file://localhost/home/couchcai/HW1\[?2004h[couchcai@localhost HW1]$ cd ~
+[?2004l]777;preexec\]777;notify;Command completed;cd ~\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ vi .bashrc
+[?2004l]777;preexec\[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H".bashrc" 29L, 515B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# User specific environment[m
+[38;5;130mif ![m [35m[[[m [38;5;130m"[m[35m$PATH[m[38;5;130m"[m [38;5;130m=~[m [38;5;130m"[m[35m$HOME[m[31m/.local/bin:[m[35m$HOME[m[31m/bin:[m[38;5;130m"[m [35m]][m[2;52H[K[3;1H[38;5;130mthen[m[3;5H[K[4;5H[35mPATH[m[38;5;130m="[m[35m$HOME[m[31m/.local/bin:[m[35m$HOME[m[31m/bin:[m[35m$PATH[m[38;5;130m"
+fi
+export[m PATH
+
+[34m# Uncomment the following line if you don't like systemctl's auto-paging featuree[9;1H:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions[m
+[38;5;130mif [[m [38;5;130m-d[m ~/.bashrc.d [38;5;130m];[m [38;5;130mthen[14;9Hfor[m rc [38;5;130min[m ~/.bashrc.d/*[38;5;130m;[m [38;5;130mdo[15;17Hif [[m [38;5;130m-f[m [38;5;130m"[m[35m$rc[m[38;5;130m"[m [38;5;130m];[m [38;5;130mthen[16;17H        . "[m[35m$rc[m[38;5;130m"[17;17Hfi[18;9Hdone
+fi
+
+unset[m[36m rc[m
+
+[38;5;130malias [m[36mll[m[38;5;130m="[m[31mls -l [m[35m$HW1[m[38;5;130m"[m[24;63H27,1[10CBot[21;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[24;53H:[21;1H[24;54H1[21;1H[24;55He[21;1H[24;56H1[21;1H[24;57He[21;1H[24;58H/[21;1H[24;59H1[21;1H[24;60He[21;1H[24;61H1[21;1H[24;62He[21;1H[24;53H          [21;1H[27m[23m[29m[m[H[2J[1;1H[96m# User specific environment[m
+[93mif ![m [38;5;224m[[[m [93m"[m[38;5;81m$PATH[m[93m"[m [93m=~[m [93m"[m[38;5;81m$HOME[m[95m/.local/bin:[m[38;5;81m$HOME[m[95m/bin:[m[93m"[m [38;5;224m]][m
+[93mthen[m
+    [38;5;81mPATH[m[93m="[m[38;5;81m$HOME[m[95m/.local/bin:[m[38;5;81m$HOME[m[95m/bin:[m[38;5;81m$PATH[m[93m"
+fi
+export[m PATH
+
+[96m# Uncomment the following line if you don't like systemctl's auto-paging featuree[9;1H:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions[m
+[93mif [[m [93m-d[m ~/.bashrc.d [93m];[m [93mthen[14;9Hfor[m rc [93min[m ~/.bashrc.d/*[93m;[m [93mdo[15;17Hif [[m [93m-f[m [93m"[m[38;5;81m$rc[m[93m"[m [93m];[m [93mthen[16;17H        . "[m[38;5;81m$rc[m[93m"[17;17Hfi[18;9Hdone
+fi
+
+unset[m[1m[96m rc[m
+
+[93malias [m[1m[96mll[m[93m="[m[95mls -l [m[38;5;81m$HW1[m[93m"[m[24;63H27,1[10CBot".bashrc" 29L, 515B[21;1H[?25h[?25l[24;64H8,0-1[22;1H[?25h[?25l[24;64H9,1  [23;1H[?25h[?25l[24;53H~@k[23;1H[24;53H   [23;1H[?25h[?25l[24;53H:[23;1H[24;1H[K[24;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[24;1H[K[24;1H[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]777;notify;Command completed;vi .bashrc\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ emacs .bashrc
+[?2004l]777;preexec\]777;notify;Command completed;emacs .bashrc\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ ll [K=$ll
+[?2004l]777;preexec\]777;notify;Command completed;ll=$ll\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ ll
+[?2004l]777;preexec\total 48
+drwxrwxr-x 2 couchcai couchcai 4096 Oct  6 21:07 [0m[01;34mcse374[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDesktop[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDocuments[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDownloads[0m
+drwxrwxr-x 2 couchcai couchcai 4096 Oct 14 00:20 [01;34mHW1[0m
+-rw-rw-r-- 1 couchcai couchcai 8192 Oct 14 00:27 hw1.script
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mMusic[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mPictures[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mPublic[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mTemplates[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mVideos[0m
+]777;notify;Command completed;ll\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ emacs[K[K[K[K[Kll[K[Kexport ll[K[KEM[K[Kemacs ll=ll
+[?2004l]777;preexec\]777;notify;Command completed;export emacs ll=ll\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ ll
+[?2004l]777;preexec\total 48
+drwxrwxr-x 2 couchcai couchcai 4096 Oct  6 21:07 [0m[01;34mcse374[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDesktop[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDocuments[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mDownloads[0m
+drwxrwxr-x 2 couchcai couchcai 4096 Oct 14 00:20 [01;34mHW1[0m
+-rw-rw-r-- 1 couchcai couchcai 8192 Oct 14 00:27 hw1.script
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mMusic[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mPictures[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mPublic[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mTemplates[0m
+drwxr-xr-x 2 couchcai couchcai 4096 Oct  3 12:21 [01;34mVideos[0m
+]777;notify;Command completed;ll\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ emacs
+[?2004l]777;preexec\fg
+^Z
+[1]+  Stopped                 emacs
+]777;notify;Command completed;emacs\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ ps
+[?2004l]777;preexec\    PID TTY          TIME CMD
+   6080 pts/5    00:00:00 bash
+   6243 pts/5    00:00:00 emacs
+   6254 pts/5    00:00:00 ps
+]777;notify;Command completed;ps\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ ps | grep emacs
+[?2004l]777;preexec\   6243 pts/5    00:00:00 [01;31m[Kemacs[m[K
+]777;notify;Command completed;ps | grep emacs\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ -0[K9[K[Kkill -9
+[?2004l]777;preexec\kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+]777;notify;Command completed;kill -9\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ echo $USER rocks\!
+[?2004l]777;preexec\couchcai rocks!
+]777;notify;Command completed;echo $USER rocks\!\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ exit
+[?2004l]777;preexec\exit
+There are stopped jobs.
+]777;notify;Command completed;exit\]777;precmd\]0;couchcai@localhost:~\]7;file://localhost/home/couchcai\[?2004h[couchcai@localhost ~]$ exit
+[?2004l]777;preexec\exit
+
+Script done on 2022-10-14 00:35:48-07:00 [COMMAND_EXIT_CODE="1"]
