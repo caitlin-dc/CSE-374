@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Author: Caitlin DeShazo-Couchot
+# UWNetID: couchcai
+# Homework 2: Part 1
+#
+# Concatenates all file contents and stores them in first file argument.
+if [ $# -lt 2 ]; then
+    echo "Usage: combine outputfilename [inputfilename ...]" >&2
+    exit 1
+elif [ -f "$1" ]; then
+    echo "Error: Output file should not exist" >&2
+    exit 1
+else
+    for  (( i=2; i <= "$#"; i++ )); do
+	cat "${!i}" >> $1 2>&1
+    done
+    exit 0
+fi
